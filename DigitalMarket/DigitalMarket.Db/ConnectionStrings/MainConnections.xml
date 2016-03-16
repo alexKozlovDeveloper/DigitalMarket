@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<ConnectionStrings>
+  <Connection> 
+    update-database -connectionString     
+    "Data Source=EPBYMINW4213;
+    Initial Catalog=DM_1;
+    Integrated Security=false;
+    User ID=web;
+    password=alexkozlov19_19;" 
+    -connectionProviderName 
+    "system.data.sqlclient"-verbose -force
+  </Connection>
+</ConnectionStrings>
