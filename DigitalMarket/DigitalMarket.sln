@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalMarket", "DigitalMarket\DigitalMarket.csproj", "{B350CD52-E3DA-49D3-A53D-83BD1C1ABF94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalMarket.Db", "DigitalMarket.Db\DigitalMarket.Db.csproj", "{3609D145-A9CF-4EF1-B264-F21ABFD6E5FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalMarket.Shared", "DigitalMarket.Shared\DigitalMarket.Shared.csproj", "{40ADAF3F-928A-4086-9995-3F93187BCC1B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{B350CD52-E3DA-49D3-A53D-83BD1C1ABF94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B350CD52-E3DA-49D3-A53D-83BD1C1ABF94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B350CD52-E3DA-49D3-A53D-83BD1C1ABF94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3609D145-A9CF-4EF1-B264-F21ABFD6E5FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3609D145-A9CF-4EF1-B264-F21ABFD6E5FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3609D145-A9CF-4EF1-B264-F21ABFD6E5FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3609D145-A9CF-4EF1-B264-F21ABFD6E5FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40ADAF3F-928A-4086-9995-3F93187BCC1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40ADAF3F-928A-4086-9995-3F93187BCC1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40ADAF3F-928A-4086-9995-3F93187BCC1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40ADAF3F-928A-4086-9995-3F93187BCC1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
