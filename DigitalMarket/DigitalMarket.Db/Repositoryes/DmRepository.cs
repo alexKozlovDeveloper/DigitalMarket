@@ -11,9 +11,16 @@ namespace DigitalMarket.Db.Repositoryes
 {
     public class DmRepository
     {
+        private string _connectionName;
+
+        public DmRepository(string connectionName)
+        {
+            _connectionName = connectionName;
+        }
+
         public User CreateUser(string name, string password, DateTime dayOfBirth, string email)
         {
-            using (var db = new MarketContext(""))
+            using (var db = new MarketContext(_connectionName))
             {
                 var user = new User
                 {

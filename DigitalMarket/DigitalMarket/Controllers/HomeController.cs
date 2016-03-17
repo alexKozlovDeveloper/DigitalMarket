@@ -1,4 +1,5 @@
 ﻿using DigitalMarket.Core.Configurations;
+using DigitalMarket.Db.Repositoryes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,10 @@ namespace DigitalMarket.Controllers
         public ActionResult Index()
         {
             Session[Keys.UserLogin] = null;
+
+            DmRepository rep = new DmRepository("DmConnection");
+
+            rep.CreateUser("alex", "123!", DateTime.Now, "abd@gmail.com");
 
             return View();
         }
