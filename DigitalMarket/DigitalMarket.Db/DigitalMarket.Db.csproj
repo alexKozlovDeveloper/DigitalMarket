@@ -61,6 +61,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositoryes\DmRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -73,6 +74,12 @@
     <EmbeddedResource Include="Migrations\201603161401058_Add_user.resx">
       <DependentUpon>201603161401058_Add_user.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DigitalMarket.Shared\DigitalMarket.Shared.csproj">
+      <Project>{40adaf3f-928a-4086-9995-3f93187bcc1b}</Project>
+      <Name>DigitalMarket.Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "LoginPage";
+}
+
+<h2>LoginPage</h2>
+
+
+
+<div class="login-container">
+
+
+</div>
+
+
+
+<script>
+
+    var userLoginTemplate = "<div>{0}</div>"
+    var logginhTemplate = "<div>Please, log in</div>"
+
+    var result = "";
+
+    $.ajax({
+        type: "POST",
+        url: 'Home/GetCurrentUserLogin',
+        contentType: false,
+        processData: false,
+        success: function (result) {
+
+            var container = $(".login-container").get(0);
+
+            var content = userLoginTemplate.format([result]);
+
+            $(container).append(content);            
+
+        },
+        error: function (ex) {
+            var container = $(".login-container").get(0);
+
+            $(container).append(logginhTemplate);
+        }
+    });
+
+</script>

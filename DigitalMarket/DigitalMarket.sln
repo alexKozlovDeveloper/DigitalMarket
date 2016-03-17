@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalMarket.Db", "Digital
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalMarket.Shared", "DigitalMarket.Shared\DigitalMarket.Shared.csproj", "{40ADAF3F-928A-4086-9995-3F93187BCC1B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalMarket.Core", "DigitalMarket.Core\DigitalMarket.Core.csproj", "{018262C8-5BDF-450D-B784-BB08E16B25C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{40ADAF3F-928A-4086-9995-3F93187BCC1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40ADAF3F-928A-4086-9995-3F93187BCC1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40ADAF3F-928A-4086-9995-3F93187BCC1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{018262C8-5BDF-450D-B784-BB08E16B25C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{018262C8-5BDF-450D-B784-BB08E16B25C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{018262C8-5BDF-450D-B784-BB08E16B25C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{018262C8-5BDF-450D-B784-BB08E16B25C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

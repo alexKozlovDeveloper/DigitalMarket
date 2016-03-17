@@ -9,7 +9,7 @@ namespace DigitalMarket.Db.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(DigitalMarket.Db.Entityes.DbContexts.MarketContext context)

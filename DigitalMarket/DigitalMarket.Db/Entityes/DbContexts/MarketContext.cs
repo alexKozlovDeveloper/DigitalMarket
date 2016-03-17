@@ -9,6 +9,6 @@ namespace DigitalMarket.Db.Entityes.DbContexts
 {
     public class MarketContext : DbContext
     {
-        public DbSet<User> Blogs { get; set; } 
+        public DbSet<User> Users { get; set; } 
     }
 }
