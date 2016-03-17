@@ -1,0 +1,22 @@
+namespace DigitalMarket.Db.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class update_user : DbMigration
+    {
+        public override void Up()
+        {
+            AddColumn("dbo.Users", "Password", c => c.String());
+            AddColumn("dbo.Users", "DayOfBirth", c => c.DateTime(nullable: false));
+            AddColumn("dbo.Users", "Email", c => c.String());
+        }
+        
+        public override void Down()
+        {
+            DropColumn("dbo.Users", "Email");
+            DropColumn("dbo.Users", "DayOfBirth");
+            DropColumn("dbo.Users", "Password");
+        }
+    }
+}

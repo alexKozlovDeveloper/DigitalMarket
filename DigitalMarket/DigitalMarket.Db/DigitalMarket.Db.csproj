@@ -58,6 +58,10 @@
     <Compile Include="Migrations\201603161401058_Add_user.Designer.cs">
       <DependentUpon>201603161401058_Add_user.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603171429375_update_user.cs" />
+    <Compile Include="Migrations\201603171429375_update_user.Designer.cs">
+      <DependentUpon>201603171429375_update_user.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,11 +72,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ConnectionStrings\MainConnections.xml" />
+    <Content Include="Other\ConnectionStrings\MainConnections.xml" />
+    <Content Include="Other\PmUsefulCommands.txt" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201603161401058_Add_user.resx">
       <DependentUpon>201603161401058_Add_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603171429375_update_user.resx">
+      <DependentUpon>201603171429375_update_user.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

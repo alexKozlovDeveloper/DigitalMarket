@@ -17,5 +17,11 @@ namespace DigitalMarket.Db.Entityes.DbContexts
         
         }
 
+        public MarketContext()
+            : base("name=DmConnection")
+        {
+
+        }
+
     }
 }

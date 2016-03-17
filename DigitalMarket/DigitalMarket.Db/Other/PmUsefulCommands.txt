@@ -1,0 +1,6 @@
+﻿
+Add-Migration migration_name
+
+update-database -Target:201603161401058_migration_name
+
+update-database -connectionString "Data Source=EPBYMINW4213;Initial Catalog=DM_1;Integrated Security=false;User ID=web;password=alexkozlov19_19;" -connectionProviderName "system.data.sqlclient"-verbose -force
