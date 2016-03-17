@@ -13,7 +13,7 @@ namespace DigitalMarket.Db.Repositoryes
     {
         public User CreateUser(string name, string password, DateTime dayOfBirth, string email)
         {
-            using (var db = new MarketContext())
+            using (var db = new MarketContext(""))
             {
                 var user = new User
                 {

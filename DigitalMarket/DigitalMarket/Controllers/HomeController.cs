@@ -20,6 +20,11 @@ namespace DigitalMarket.Controllers
             return View();
         }
 
+        public ActionResult RegistrationPage()
+        {
+            return View();
+        }
+
         public ActionResult GetCurrentUserLogin()
         {
             var login = Session[Keys.UserLogin];

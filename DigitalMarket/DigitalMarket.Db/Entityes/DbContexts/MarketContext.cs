@@ -9,6 +9,13 @@ namespace DigitalMarket.Db.Entityes.DbContexts
 {
     public class MarketContext : DbContext
     {
-        public DbSet<User> Users { get; set; } 
+        public DbSet<User> Users { get; set; }
+
+        public MarketContext(string connectionString)
+            : base(connectionString)
+        { 
+        
+        }
+
     }
 }

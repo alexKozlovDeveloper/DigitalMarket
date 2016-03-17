@@ -16,7 +16,7 @@
 <script>
 
     var userLoginTemplate = "<div>{0}</div>"
-    var logginhTemplate = "<div>Please, log in</div>"
+    var logginhTemplate = "<div class='login-click'>Please, log in</div>"
 
     var result = "";
 
@@ -38,6 +38,17 @@
             var container = $(".login-container").get(0);
 
             $(container).append(logginhTemplate);
+
+            $(".login-click").click(function (e) {
+
+                debugger;
+
+                window.location.href = '/home/RegistrationPage';
+
+
+
+
+            });
         }
     });
 
