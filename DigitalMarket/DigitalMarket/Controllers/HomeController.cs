@@ -1,5 +1,6 @@
 ﻿using DigitalMarket.Core.Configurations;
 using DigitalMarket.Db.Repositoryes;
+using DigitalMarket.Shared.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,15 +17,21 @@ namespace DigitalMarket.Controllers
 
         public ActionResult Index()
         {
-            Session[Keys.UserLogin] = null;
+            //Session[Keys.UserLogin] = null;
 
-            DmRepository rep = new DmRepository("DmConnection");
+            //DmRepository rep = new DmRepository("DmConnection");
 
             //rep.CreateUser("alex", "123!", DateTime.Now, "abd@gmail.com");
 
 
 
+            //var logger = new DmLogger();
+            var guid = Guid.NewGuid();
+            var str = "Some message        12333333333333333331231545151515555515115" + guid.ToString();
 
+            //Some message        1233333333333333333123154515151555551511531828e65-a861-456c-bb4e-8992a6a1706c
+
+            DmLogger.Log.Info(str);
 
 
             return View();
