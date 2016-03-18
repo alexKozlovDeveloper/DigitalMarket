@@ -20,7 +20,12 @@ namespace DigitalMarket.Controllers
 
             DmRepository rep = new DmRepository("DmConnection");
 
-            rep.CreateUser("alex", "123!", DateTime.Now, "abd@gmail.com");
+            //rep.CreateUser("alex", "123!", DateTime.Now, "abd@gmail.com");
+
+
+
+
+
 
             return View();
         }
