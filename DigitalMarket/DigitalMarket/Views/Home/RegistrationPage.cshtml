@@ -2,4 +2,30 @@
     ViewBag.Title = "RegistrationPage";
 }
 
+<link href="~/Content/ViewsCss/Registration.css" rel="stylesheet" />
+
 <h2>RegistrationPage</h2>
+
+<div class="registration-container">
+    <div class="description-container">
+        <div>Name:</div>
+        <div>Password:</div>
+        <div>Email:</div>
+        <div>Day of birth:</div>
+    </div>
+    <div class="input-container">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="date">
+    </div>    
+</div>
+<div class="submit-button">Submit</div>
+
+<script>
+
+    $(".submit-button").click(function (e) {
+        debugger;
+    });
+
+</script>

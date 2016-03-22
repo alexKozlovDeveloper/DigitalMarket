@@ -1,0 +1,36 @@
+﻿.description-container {
+    width: 120px;
+    height: 130px;
+    float: left;
+}
+
+.description-container div {
+    margin-top: 8px;
+    margin-bottom: 13px;
+}
+
+.input-container {
+    width: 200px;
+    height: 130px;
+    float: right;
+}
+
+.input-container input {
+    margin: 5px;
+    height: 16px;
+    width: 170px;
+}
+
+.registration-container {
+    width: 320px;
+    height: 130px;
+}
+
+.submit-button {
+    background-color: darkorange;
+    width: 150px;
+    height: 30px;
+    margin-left: 70px;
+    text-align: center;
+    padding-top: 10px;
+}
