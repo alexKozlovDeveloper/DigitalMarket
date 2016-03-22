@@ -15,6 +15,8 @@ namespace DigitalMarket.Controllers
         //
         // GET: /Home/
 
+        private const string connectionName = "DmConnection";
+
         public ActionResult Index()
         {
             //Session[Keys.UserLogin] = null;
@@ -41,6 +43,21 @@ namespace DigitalMarket.Controllers
         {
             return View();
         }
+
+
+        public ActionResult RegistrationNewUser(string name, string password, string dayOfBirth, string email)
+        {
+            DmRepository rep = new DmRepository(connectionName);
+
+            DateTime day = DateTime.Parse(dayOfBirth);
+
+            //rep.CreateUser(name, password, dayOfBirth, email);
+
+
+
+            return View();
+        }
+
 
         public ActionResult GetCurrentUserLogin()
         {
@@ -71,5 +88,8 @@ namespace DigitalMarket.Controllers
 
             return Json(login);
         }
+
+
+
     }
 }

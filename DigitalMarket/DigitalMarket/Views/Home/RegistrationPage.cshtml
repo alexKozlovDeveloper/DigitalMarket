@@ -14,11 +14,11 @@
         <div>Day of birth:</div>
     </div>
     <div class="input-container">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <input type="date">
-    </div>    
+        <input class="input-name" type="text">
+        <input class="input-password" type="text">
+        <input class="input-email" type="text">
+        <input class="input-dayOfBirth" type="date">
+    </div>
 </div>
 <div class="submit-button">Submit</div>
 
@@ -26,6 +26,29 @@
 
     $(".submit-button").click(function (e) {
         debugger;
-    });
+        //string name, string password, DateTime dayOfBirth, string email
 
+        var name = $(".input-name").get(0).value;
+        var password = $(".input-password").get(0).value;
+        var email = $(".input-email").get(0).value;
+        var dayOfBirth = $(".input-dayOfBirth").get(0).value;
+
+        var urlParametrsTemplate = "?name={0}&password={1}&dayOfBirth={2}&email={3}";
+        var urlParametrs = urlParametrsTemplate.format([name, password, dayOfBirth, email]);
+
+
+
+        $.ajax({
+            type: "POST",
+            url: 'RegistrationNewUser' + urlParametrs,
+            contentType: false,
+            processData: false,
+            success: function (result) {
+                debugger;
+            },
+            error: function (ex) {
+                debugger;
+            }
+        });
+    });
 </script>
