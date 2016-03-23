@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/ViewsCss/layout.css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
     <script src="~/Scripts/Helpers/StringHelper.js"></script>
     @Scripts.Render("~/bundles/jquery")
-    @RenderBody()
-    
+
+    <div class="main-container">
+        <div class="menu"></div>
+        <div class="body-container">
+            @RenderBody()
+        </div>
+        <div class="footer"></div>
+    </div>
     @RenderSection("scripts", required: false)
 </body>
 </html>
