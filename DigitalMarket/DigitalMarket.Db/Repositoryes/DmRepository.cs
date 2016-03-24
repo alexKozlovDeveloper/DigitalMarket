@@ -4,12 +4,13 @@ using DigitalMarket.Shared.Convert;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DigitalMarket.Db.Repositoryes
 {
-    public class DmRepository
+    public class DmRepository : IDmRepository<EntityBase>
     {
         private string _connectionName;
 
@@ -35,9 +36,32 @@ namespace DigitalMarket.Db.Repositoryes
 
                 db.SaveChanges();
 
+               //var dd =  db.Users.Where(a => a);
+
+
                 return user;
             }
         }
+
+        public IEnumerable<User> Gets(Func<User, bool> predicate) 
+        {
+            using (var db = new MarketContext(_connectionName))
+            {
+
+
+                var ddd = db.Users.Select(predicate);
+
+   
+
+
+
+               // return user;
+            }
+
+
+            return new List<User>();
+        }
+
 
         //public ActivateCode CreateActivateCode(string login, string password, string email)
         //{
@@ -89,5 +113,26 @@ namespace DigitalMarket.Db.Repositoryes
 
         //    return user;
         //}
+
+        //public IQueryable<EntityBase> Get(bool cache = true, params System.Linq.Expressions.Expression<Func<EntityBase, object>>[] includes)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        public void Insert(EntityBase entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(EntityBase entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(EntityBase entity)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

@@ -40,7 +40,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configurations\Keys.cs" />
+    <Compile Include="Coordinators\UsersCoordinator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DigitalMarket.Db\DigitalMarket.Db.csproj">
+      <Project>{3609d145-a9cf-4ef1-b264-f21abfd6e5ff}</Project>
+      <Name>DigitalMarket.Db</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

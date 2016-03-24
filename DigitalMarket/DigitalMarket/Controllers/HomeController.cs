@@ -51,6 +51,10 @@ namespace DigitalMarket.Controllers
 
             DateTime day = DateTime.Parse(dayOfBirth);
 
+
+            var sd = rep.Gets(a => a.Name == name);
+
+
             //rep.CreateUser(name, password, dayOfBirth, email);
 
 
