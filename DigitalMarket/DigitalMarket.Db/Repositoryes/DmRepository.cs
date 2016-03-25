@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DigitalMarket.Db.Repositoryes
 {
-    public class DmRepository : IDmRepository<EntityBase>
+    public class DmRepository<Entity> : IDmRepository<Entity> where Entity : EntityBase
     {
         private string _connectionName;
 
@@ -19,47 +19,43 @@ namespace DigitalMarket.Db.Repositoryes
             _connectionName = connectionName;
         }
 
-        public User CreateUser(string name, string password, DateTime dayOfBirth, string email)
+
+
+
+        //public User CreateUser(string name, string password, DateTime dayOfBirth, string email)
+        //{
+        //    using (var db = new MarketContext(_connectionName))
+        //    {
+        //        var user = new User
+        //        {
+        //            Id = Guid.NewGuid(),
+        //            Name = name,
+        //            Password = password,
+        //            Email = email,
+        //            DayOfBirth = dayOfBirth
+        //        };
+
+        //        db.Users.Add(user);
+
+        //        db.SaveChanges();
+
+        //       //var dd =  db.Users.Where(a => a);
+
+
+        //        return user;
+        //    }
+        //}
+
+        public IEnumerable<Entity> Gets(Func<Entity, bool> expression) 
         {
             using (var db = new MarketContext(_connectionName))
             {
-                var user = new User
-                {
-                    Id = Guid.NewGuid(),
-                    Name = name,
-                    Password = password,
-                    Email = email,
-                    DayOfBirth = dayOfBirth
-                };
+                var dbSet = db.Set<Entity>();
 
-                db.Users.Add(user);
+                var d = dbSet.Where(expression);
 
-                db.SaveChanges();
-
-               //var dd =  db.Users.Where(a => a);
-
-
-                return user;
+                return new List<Entity>();
             }
-        }
-
-        public IEnumerable<User> Gets(Func<User, bool> predicate) 
-        {
-            using (var db = new MarketContext(_connectionName))
-            {
-
-
-                var ddd = db.Users.Select(predicate);
-
-   
-
-
-
-               // return user;
-            }
-
-
-            return new List<User>();
         }
 
 
@@ -119,20 +115,46 @@ namespace DigitalMarket.Db.Repositoryes
         //    throw new NotImplementedException();
         //}
 
-        public void Insert(EntityBase entity)
+
+        public void Insert(Entity entity)
         {
-            throw new NotImplementedException();
+            using (var db = new MarketContext(_connectionName))
+            {
+                var dd = db.Users.Select(a => a);
+
+
+                var dbSet = db.Set<Entity>();
+
+                entity.Id = Guid.NewGuid();
+
+                dbSet.Add(entity);
+
+                db.SaveChanges();
+            }
         }
 
-        public void Update(EntityBase entity)
+        public void Delete(Entity entity)
         {
-            throw new NotImplementedException();
+            using (var db = new MarketContext(_connectionName))
+            {
+                var dbSet = db.Set<Entity>();
+
+                dbSet.Remove(entity);
+
+                db.SaveChanges();
+            }
         }
 
-        public void Delete(EntityBase entity)
+        public void Update(Entity entity)
         {
-            throw new NotImplementedException();
-        }
+            using (var db = new MarketContext(_connectionName))
+            {
+                var dbSet = db.Set<Entity>();
 
+                dbSet.Add(entity);
+
+                db.SaveChanges();
+            }
+        }
     }
 }

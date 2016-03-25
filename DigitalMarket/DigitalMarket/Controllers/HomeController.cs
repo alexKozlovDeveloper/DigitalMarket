@@ -1,4 +1,5 @@
 ﻿using DigitalMarket.Core.Configurations;
+using DigitalMarket.Db.Entityes;
 using DigitalMarket.Db.Repositoryes;
 using DigitalMarket.Shared.Logging;
 using System;
@@ -47,10 +48,19 @@ namespace DigitalMarket.Controllers
 
         public ActionResult RegistrationNewUser(string name, string password, string dayOfBirth, string email)
         {
-            DmRepository rep = new DmRepository(connectionName);
+            var rep = new DmRepository<User>(connectionName);
 
             DateTime day = DateTime.Parse(dayOfBirth);
 
+            var user = new User 
+            {
+                Name = name,
+                Password = password,
+                DayOfBirth = day,
+                Email = email
+            };
+
+            rep.Insert(user);
 
             var sd = rep.Gets(a => a.Name == name);
 
